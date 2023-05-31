@@ -4,49 +4,47 @@ import styled from '@emotion/native';
 
 const parseThousands = value => {
   return value >= 1000
-    ? `${Math.round(value / 100) / 10}k` // Formatea los números mayores o iguales a 1000 como "xk" (por ejemplo, 1.5k)
-    : String(value); // Convierte los números menores a 1000 en cadenas de texto
+    ? `${Math.round(value / 100) / 10}k`
+    : String(value);
 };
 
 const RepositoryItem = (props) => {
   return (
     <Contenedorinfo key={props.id}>
       <ContenedorImagenTextos>
-        <Imagen source={{ uri: props.ownerAvatarUrl }} /> {/* Imagen con la URL proporcionada */}
+        <Imagen source={{ uri: props.ownerAvatarUrl }} /> 
         <TextosImagen>
-          <Titulo>Full Name: {props.fullName}</Titulo> {/* Nombre completo */}
-          <DescripcionCard>Description: {props.descripcion}</DescripcionCard> {/* Descripción */}
-          <TextoLenguaje>{props.language}</TextoLenguaje> {/* Lenguaje */}
+          <Titulo>Full Name: {props.fullName}</Titulo> 
+          <DescripcionCard>Description: {props.descripcion}</DescripcionCard> 
+          <TextoLenguaje>{props.language}</TextoLenguaje> 
         </TextosImagen>
       </ContenedorImagenTextos>
       <ContenedorExtra>
         <ContenedorExtraIndividual>
           <TituloExtra>Stars</TituloExtra>
-          <TituloExtra2>{parseThousands(props.stargazersCount)}</TituloExtra2> {/* Número de estrellas */}
+          <TituloExtra2>{parseThousands(props.stargazersCount)}</TituloExtra2>
         </ContenedorExtraIndividual>
 
         <ContenedorExtraIndividual>
           <TituloExtra>Stars</TituloExtra>
-          <TituloExtra2>{parseThousands(props.stargazersCount)}</TituloExtra2> {/* Número de estrellas (repetido en el código original) */}
+          <TituloExtra2>{parseThousands(props.stargazersCount)}</TituloExtra2> 
         </ContenedorExtraIndividual>
 
         <ContenedorExtraIndividual>
           <TituloExtra>Review</TituloExtra>
-          <TituloExtra2>{parseThousands(props.ratingAverage)}</TituloExtra2> {/* Promedio de calificaciones */}
+          <TituloExtra2>{parseThousands(props.ratingAverage)}</TituloExtra2> 
         </ContenedorExtraIndividual>
 
         <ContenedorExtraIndividual>
           <TituloExtra>ForksCount</TituloExtra>
-          <TituloExtra2>{parseThousands(props.forksCount)}</TituloExtra2> {/* Número de forks */}
+          <TituloExtra2>{parseThousands(props.forksCount)}</TituloExtra2> 
         </ContenedorExtraIndividual>
       </ContenedorExtra>
     </Contenedorinfo>
   );
 };
 
-export default RepositoryItem;
-
-// Estilos con styled components
+export default RepositoryItem; 
 
 const Contenedorinfo = styled(View)`
   margin: 10px;

@@ -7,7 +7,7 @@ import styled from '@emotion/native';
 const RepositoryList = () => {
   return (
     <>
-      <Titulo>Rate Repository Application</Titulo> {/* Título de la aplicación */}
+      <Titulo>Rate Repository Application</Titulo>
       <FlatList
         data={repositories} 
         ItemSeparatorComponent={() => <Text></Text>}
@@ -19,12 +19,10 @@ const RepositoryList = () => {
   );
 };
 
-export default RepositoryList;
-
-// Estilos con styled components
+export default RepositoryList
 
 const Titulo = styled(Text)`
-  margin: 20px auto; /* Márgenes superior e inferior de 20px y centrado horizontal */
+  margin: 20px auto; 
   font-size: 25px;
-  color: #fff; /* Color del texto */
+  color: #fff; 
 `;
