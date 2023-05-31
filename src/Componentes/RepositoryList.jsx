@@ -7,9 +7,9 @@ import styled from '@emotion/native';
 const RepositoryList = () => {
   return (
     <>
-      <Titulo>Rate Repository Application</Titulo>
+      <Titulo>Rate Repository Application</Titulo> {/* Título de la aplicación */}
       <FlatList
-        data={repositories}
+        data={repositories} 
         ItemSeparatorComponent={() => <Text></Text>}
         renderItem={({ item: repo }) => (
           <RepositoryItem {...repo} />
@@ -21,9 +21,10 @@ const RepositoryList = () => {
 
 export default RepositoryList;
 
+// Estilos con styled components
 
 const Titulo = styled(Text)`
-  margin: 20px auto;
+  margin: 20px auto; /* Márgenes superior e inferior de 20px y centrado horizontal */
   font-size: 25px;
-  color: #fff;
+  color: #fff; /* Color del texto */
 `;

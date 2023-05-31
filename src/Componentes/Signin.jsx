@@ -21,12 +21,14 @@ const RepositoryList = () => {
 
 export default RepositoryList;
 
+// Estilos con styled components
+
 const ContenedorSignin = styled(View)`
-  background: #09245e;
-`
+  background: #09245e; /* Fondo azul oscuro */
+`;
 
 const Titulo = styled(Text)`
-  margin: 20px auto;
+  margin: 20px auto; /* Márgenes superior e inferior de 20px y centrado horizontal */
   font-size: 25px;
-  color: #fff;
+  color: #fff; /* Color del texto */
 `;
